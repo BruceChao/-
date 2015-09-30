@@ -1,0 +1,31 @@
+<section class="post-comments">
+    <div class="ds-thread" data-thread-key="{{slug}}" data-title="{{title}}" data-url="{{url absolute=" true "}}"></div>
+    <script type="text/javascript">
+        var duoshuoQuery = {
+            short_name: "brucechao"
+        };
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';
+            ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+
+        function toggleDuoshuoComments(container, key, title, url, btn) {
+            if (jQuery(container).has("div").length > 0) {
+                jQuery(container).empty();
+                jQuery(btn).html('展开讨论');
+                return;
+            }
+            var el = document.createElement('div');
+            el.setAttribute('data-thread-key', key);
+            el.setAttribute('data-title', title);
+            el.setAttribute('data-url', url);
+            DUOSHUO.EmbedThread(el);
+            jQuery(container).append(el);
+            jQuery(btn).html('关闭讨论');
+        }
+    </script>
+</section>

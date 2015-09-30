@@ -1,0 +1,65 @@
+{{!< default}}
+{{#post}}
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="{{date format="DD MMM YYYY"}}" class="post-meta__date date">{{date format="DD MMM YYYY"}}</time> &#8226; <span class="post-meta__tags tags">{{tags prefix="于 "}}</span>
+        <!--<span class="post-meta__author author"><img src="{{author.image}}" alt="profile image for {{author.name}}" class="avatar post-meta__avatar" /> by {{author.name}}</span>-->
+      </div>
+      <h1 class="post-title">{{{title}}}</h1>
+    </header>
+    <section class="{{post_class}}">
+      {{content}}
+    </section>
+
+<!-- <section class="{{post_class}}">
+  {{#next_post}}
+  <p><a class="btn-border-small" href="{{url}}">上一篇 : {{title}}</a></p>
+  {{else}}
+  <p><a class="btn-border-small">已经是最新的文章了</a></p>
+  {{/next_post}}
+
+  {{#prev_post}}
+  <p><a class="btn-border-small" href="{{url}}">下一篇 : {{title}}</a></p>
+  {{else}}
+  <p><a class="btn-border-small">已经是最后一篇了</a></p>
+  {{/prev_post}}
+
+</section> -->
+
+<!-- 多说评论框 -->
+<div align="center">
+<section class="post-comments">
+<a class="post-comments-btn" href="javascript:void(0);" onclick="toggleDuoshuoComments('#comments', '{{slug}}', '{{title}}', '{{url absolute="true"}}', this);">展开讨论</a>
+<div id="comments"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"brucechao"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//brucechao.qiniudn.com/embed1.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0]
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+    function toggleDuoshuoComments(container, key, title, url, btn) {
+        if (jQuery(container).has("div").length > 0) {
+            jQuery(container).empty();
+            jQuery(btn).html('展开讨论');
+            return;
+        }
+        var el = document.createElement('div');
+        el.setAttribute('data-thread-key', key);
+        el.setAttribute('data-title', title);
+        el.setAttribute('data-url', url);
+        DUOSHUO.EmbedThread(el);
+        jQuery(container).append(el);
+        jQuery(btn).html('关闭讨论');
+    }
+ </script>
+ </section>
+ {{!-- {{> comments}} --}}
+ </article>
+{{/post}}
+

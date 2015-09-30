@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">我用古闪米特语写成一封情书，把它刻在一块花岗岩浮雕上。</span><br />
+				<span class="space"/><span class="comments">这块被施了魔法的浮雕，就屹立在唐古拉山麓，在一个远离尘嚣的地方，由梦境构建的时空。</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Boy i =  Boy(<span class="string">""</span>);<br />
+				Girl u =  Girl(<span class="string">""</span>);<br />
+				<span class="comments">// Nov 2, 2010, I told you I love you. </span><br />
+				i.love(u);<br />
+				<span class="comments">// Luckily, you accepted and became my girlfriend eversince.</span><br />
+				u.accepted();<br />
+				<span class="comments">犹太人抄走了这封情书，用来写完了旧约圣经；</span><br />
+				i.miss(u);<br />
+				<span class="comments">穆罕默德抄走了这封情书，接着写完了古兰经。</span><br />
+				i.takeCareOf(u);<br />
+				<span class="comments">哦，这些家伙，转载都没留个名字，还歪曲了我的文字，</span><br />
+				<span class="comments">希伯莱语和阿拉伯语，都来自这块魔法浮雕，</span><br />
+				<span class="placeholder"/><span class="comments">// 这些雕着红色玫瑰和黑色眼睛的浮雕是所有梦的来源。</span><br />
+				<span class="placeholder"/><span class="comments">// 所有人在睡眠时候的梦境，都来之于此，也回归于此。</span><br />
+				<span class="placeholder"/>已经有一万两千年之久，我又一次回到这块梦境之地，<br />
+				}<br />
+				<span class="comments">//在浮雕前辨认我已经不再认识的文字，那些细长美丽的尤如精灵语的文字写的是人类之所以延续的故事，一个关于爱情的故事。.</span><br />
+				i.marry(u);<br />
+				i.liveHappilyWith(u);<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Minyue, I have fallen in love with you for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">- hackerzhou</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			Copyright © 2015
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2015, 1, 1);
+		together.setHours(24);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+	<embed src="Nothing On You.mp3" autostart="True" loop = "True" hidden = "True"></embed>
+</body>
+</html>

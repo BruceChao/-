@@ -1,0 +1,127 @@
+html,
+body,
+iframe,
+h1,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+.bgImage {
+    width: 100%;
+    height: 853px;
+    float: left;
+    z-index: 0;
+    background-size: cover;
+    display: block;
+    background-position: center center;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+}
+
+.error404 .bgImage {
+    background-position: center 0;
+    color: #fff !important;
+    background-color: #000;
+}
+
+.error404 {
+    overflow-x: hidden;
+}
+
+#wrapper404 a {
+    color: #EF340F;
+}
+
+#wrapper404 a:hover {
+    text-decoration: underline;
+}
+
+#wrapper404 h1,
+#wrapper404 p {
+    z-index: 10;
+    position: relative;
+    top: 60%;
+}
+
+#stars404 {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#stars2404 {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#spaceman404 {
+    background: url(../404/404spaceman.png) center center no-repeat;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+}
+
+.textaligncenter {
+    text-align: center;
+}
+
+.padding3 {
+    padding-top: 2em;
+    padding-bottom: 3em;
+}
+
+.moveDown {
+    -webkit-animation: moveDown 1s ease-in-out both;
+    -moz-animation: moveDown 1s ease-in-out both;
+    -o-animation: moveDown 1s ease-in-out both;
+    -ms-animation: moveDown 1s ease-in-out both;
+    animation: moveDown 1s ease-in-out both;
+}
+
+@-webkit-keyframes moveDown {
+    0% {
+        -webkit-transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(20px);
+    }
+}
+
+body {
+    font-family: 'ProximaNova-Light', 'Helvetica-neue', 'Helvetica', Arial, sans-serif;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6em;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 1em;
+    font-weight: normal;
+    font-family: 'ProximaNova-Bold', 'Helvetica-neue', 'Helvetica', Arial, sans-serif;
+}
+}
